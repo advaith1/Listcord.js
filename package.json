@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Listcord/Listcord.js/issues"
   },
-  "homepage": "https://github.com/Listcord/Listcord.js#readme"
+  "homepage": "https://github.com/Listcord/Listcord.js#readme",
+  "dependencies": {
+    "browser-request": "^0.3.3"
+  }
 }
