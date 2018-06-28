@@ -1,6 +1,5 @@
 
-const request = require('browser-request')
-
+const request = require('request')
 'use strict'
 
 module.exports = class {
@@ -11,15 +10,15 @@ module.exports = class {
   get (endpoint) {
     return new Promise((resolve, reject) => {
       var options = {
-        url: `/api${endpoint}`,
+        url: `https://www.listcord.com/api${endpoint}`,
         headers: { token: this.token },
         json: true
       }
 
-      var endpoint = (error, response, body) => {
+      var callback = (error, response, body) => {
         if (error) reject(error)
         else resolve(body)
-      })
+      }
 
       request(options, callback)
     })
@@ -29,15 +28,15 @@ module.exports = class {
     return new Promise((resolve, reject) => {
       var options = {
         mathod: 'POST',
-        url: `/api${endpoint}`,
+        url: `https://www.listcord.com/api${endpoint}`,
         headers: { token: this.token },
         json: typeof data === 'object' ? data : { }
       }
 
-      var endpoint = (error, response, body) => {
+      var callback = (error, response, body) => {
         if (error) reject(error)
         else resolve(body)
-      })
+      }
 
       request(options, callback)
     })

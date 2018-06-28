@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Listcord/Listcord.js#readme",
   "dependencies": {
-    "browser-request": "^0.3.3"
+    "browser-request": "^0.3.3",
+    "request": "^2.87.0"
   }
 }
