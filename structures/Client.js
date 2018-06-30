@@ -27,7 +27,7 @@ module.exports = class {
   post (endpoint, data) {
     return new Promise((resolve, reject) => {
       var options = {
-        mathod: 'POST',
+        method: 'POST',
         url: `https://www.listcord.com/api${endpoint}`,
         headers: { token: this.token },
         json: typeof data === 'object' ? data : { }
