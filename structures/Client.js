@@ -43,27 +43,15 @@ module.exports = class {
   }
 
   getBot (id) {
-    return new Promise((resolve, reject) => {
-      this.get(`/bot/${id}`)
-        .then(resolve)
-        .catch(reject)
-    })
+    return this.get(`/bot/${id}`)
   }
 
   getBotVotes (id) {
-    return new Promise((resolve, reject) => {
-      this.get(`/bot/${id}/votes`)
-        .then(resolve)
-        .catch(reject)
-    })
+    return this.get(`/bot/${id}/votes`)
   }
 
   postBotGuilds (id, guilds, shard) {
-    return new Promise((resolve, reject) => {
-      this.post(`/bot/${id}/guilds`, { guilds, shard })
-        .then(resolve)
-        .catch(reject)
-    })
+    return this.post(`/bot/${id}/guilds`, { guilds, shard })
   }
 
   login (token) {
