@@ -10,7 +10,7 @@ module.exports = class {
   get (endpoint) {
     return new Promise((resolve, reject) => {
       var options = {
-        url: `https://www.listcord.com/api${endpoint}`,
+        url: `https://listcord.com/api${endpoint}`,
         headers: { token: this.token },
         json: true
       }
@@ -28,7 +28,7 @@ module.exports = class {
     return new Promise((resolve, reject) => {
       var options = {
         method: 'POST',
-        url: `https://www.listcord.com/api${endpoint}`,
+        url: `https://listcord.com/api${endpoint}`,
         headers: { token: this.token },
         json: typeof data === 'object' ? data : { }
       }
